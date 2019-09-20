@@ -1,0 +1,7 @@
+#ifndef AREV_ERROR
+#define AREV_ERROR(CODE, NAME, DESCRIPTION)
+#endif
+
+AREV_ERROR(0, ERROR_NONE, "No error")
+AREV_ERROR(-1000, ERROR_INT_OVERFLOW, "Integer overflow")
+AREV_ERROR(-1001, ERROR_INT_UNDERFLOW, "Integer underflow")
