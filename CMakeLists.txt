@@ -2,11 +2,13 @@ cmake_minimum_required(VERSION 3.12)
 
 project(arev)
 
-# Set global compiler definitions.
+# Set global compiler definitions and options.
 if (CMAKE_C_COMPILER_ID MATCHES "GNU")
     add_compile_definitions(AREV_GCC)
+    add_compile_options(-Wall -Wextra -Werror)
 elseif (CMAKE_C_COMPILER_ID MATCHES "Clang")
     add_compile_definitions(AREV_CLANG AREV_GCC)
+    add_compile_options(-Wall -Wextra -Werror)
 endif()
 add_compile_definitions(
     AREV_COMPILER_ID="${CMAKE_C_COMPILER_ID}"
