@@ -5,8 +5,8 @@ typedef enum {
 #define AREV_ERROR(CODE, NAME, ...) NAME = CODE,
 #include <arev/error.inc>
 #undef AREV_ERROR
-} err_Num;
+} err_t;
 
-const char *err_AsCStr(err_Num errnum);
+const char *err_AsCStr(err_t err);
 
 #endif
