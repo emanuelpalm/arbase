@@ -40,6 +40,15 @@ err_t NAME(TYPE a, TYPE b, TYPE *out) {      \
     return ERROR_NONE;                       \
 }
 
+#define GEN_MOD(NAME, TYPE)                  \
+inline                                       \
+err_t NAME(TYPE a, TYPE b, TYPE *out) {      \
+    if (b == 0) {                            \
+        return ERROR_INT_MODZERO;            \
+    }                                        \
+    *out = a % b;                            \
+    return ERROR_NONE;                       \
+}
 
 GEN_ADD(int_AddI8, int8_t)
 GEN_ADD(int_AddI16, int16_t)
@@ -60,6 +69,16 @@ GEN_DIV(int_DivU16, uint16_t)
 GEN_DIV(int_DivU32, uint32_t)
 GEN_DIV(int_DivU64, uint64_t)
 GEN_DIV(int_DivSize, size_t)
+
+GEN_MOD(int_ModI8, int8_t)
+GEN_MOD(int_ModI16, int16_t)
+GEN_MOD(int_ModI32, int32_t)
+GEN_MOD(int_ModI64, int64_t)
+GEN_MOD(int_ModU8, uint8_t)
+GEN_MOD(int_ModU16, uint16_t)
+GEN_MOD(int_ModU32, uint32_t)
+GEN_MOD(int_ModU64, uint64_t)
+GEN_MOD(int_ModSize, size_t)
 
 GEN_MUL(int_MulI8, int8_t)
 GEN_MUL(int_MulI16, int16_t)

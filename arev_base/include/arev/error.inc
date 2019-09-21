@@ -6,5 +6,6 @@ AREV_ERROR(0, ERROR_NONE, "No error")
 
 // Integer errors.
 AREV_ERROR(-256, ERROR_INT_DIVZERO, "Division by zero")
-AREV_ERROR(-257, ERROR_INT_OVERFLOW, "Integer overflow")
-AREV_ERROR(-258, ERROR_INT_UNDERFLOW, "Integer underflow")
+AREV_ERROR(-257, ERROR_INT_MODZERO, "Modulus by zero")
+AREV_ERROR(-258, ERROR_INT_OVERFLOW, "Integer overflow")
+AREV_ERROR(-259, ERROR_INT_UNDERFLOW, "Integer underflow")

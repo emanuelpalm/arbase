@@ -34,6 +34,16 @@ err_t int_DivU32(uint32_t a, uint32_t b, uint32_t *out);
 err_t int_DivU64(uint64_t a, uint64_t b, uint64_t *out);
 err_t int_DivSize(size_t a, size_t b, size_t *out);
 
+err_t int_ModI8(int8_t a, int8_t b, int8_t *out);
+err_t int_ModI16(int16_t a, int16_t b, int16_t *out);
+err_t int_ModI32(int32_t a, int32_t b, int32_t *out);
+err_t int_ModI64(int64_t a, int64_t b, int64_t *out);
+err_t int_ModU8(uint8_t a, uint8_t b, uint8_t *out);
+err_t int_ModU16(uint16_t a, uint16_t b, uint16_t *out);
+err_t int_ModU32(uint32_t a, uint32_t b, uint32_t *out);
+err_t int_ModU64(uint64_t a, uint64_t b, uint64_t *out);
+err_t int_ModSize(size_t a, size_t b, size_t *out);
+
 err_t int_MulI8(int8_t a, int8_t b, int8_t *out);
 err_t int_MulI16(int16_t a, int16_t b, int16_t *out);
 err_t int_MulI32(int32_t a, int32_t b, int32_t *out);
