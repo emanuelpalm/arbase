@@ -1,6 +1,5 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.12)
 project(arev_base C)
-set(CMAKE_C_STANDARD 11)
 
 set(
     SOURCE_FILES
