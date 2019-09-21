@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.12)
 project(arev)
 set(CMAKE_C_STANDARD 11)
 
+# Enable LTO for release builds.
+if (CMAKE_BUILD_TYPE MATCHES "Release")
+    set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+endif ()
+
 # Set global compiler definitions and options.
 if (CMAKE_C_COMPILER_ID MATCHES "GNU")
     add_compile_definitions(AREV_GCC)
