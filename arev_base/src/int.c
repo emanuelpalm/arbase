@@ -88,7 +88,7 @@ GEN_MUL(int_MulU8, uint8_t)
 GEN_MUL(int_MulU16, uint16_t)
 GEN_MUL(int_MulU32, uint32_t)
 GEN_MUL(int_MulU64, uint64_t)
-GEN_ADD(int_MulSize, size_t)
+GEN_MUL(int_MulSize, size_t)
 
 GEN_SUB(int_SubI8, int8_t)
 GEN_SUB(int_SubI16, int16_t)
@@ -98,7 +98,7 @@ GEN_SUB(int_SubU8, uint8_t)
 GEN_SUB(int_SubU16, uint16_t)
 GEN_SUB(int_SubU32, uint32_t)
 GEN_SUB(int_SubU64, uint64_t)
-GEN_ADD(int_SubSize, size_t)
+GEN_SUB(int_SubSize, size_t)
 
 #define GEN_CAST_IX_TO_IX(NAME, TYPE_IN, TYPE_OUT, TYPE_OUT_MIN, TYPE_OUT_MAX) \
 inline                                                                         \
