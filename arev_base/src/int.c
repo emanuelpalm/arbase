@@ -214,7 +214,23 @@ GEN_CAST_UX_TO_XX(int_CastSizeToI8, size_t, int8_t, INT8_MAX)
 GEN_CAST_UX_TO_XX(int_CastSizeToI16, size_t, int16_t, INT16_MAX)
 GEN_CAST_UX_TO_XX(int_CastSizeToI32, size_t, int32_t, INT32_MAX)
 GEN_CAST_UX_TO_XX(int_CastSizeToI64, size_t, int64_t, INT64_MAX)
+#if SIZE_MAX > UINT8_MAX
 GEN_CAST_UX_TO_XX(int_CastSizeToU8, size_t, uint8_t, UINT8_MAX)
+#else
+GEN_CAST_UNCHECKED(int_CastSizeToU8, size_t, uint8_t)
+#endif
+#if SIZE_MAX > UINT16_MAX
 GEN_CAST_UX_TO_XX(int_CastSizeToU16, size_t, uint16_t, UINT16_MAX)
+#else
+GEN_CAST_UNCHECKED(int_CastSizeToU16, size_t, uint16_t)
+#endif
+#if SIZE_MAX > UINT32_MAX
 GEN_CAST_UX_TO_XX(int_CastSizeToU32, size_t, uint32_t, UINT32_MAX)
+#else
+GEN_CAST_UNCHECKED(int_CastSizeToU32, size_t, uint32_t)
+#endif
+#if SIZE_MAX > UINT64_MAX
 GEN_CAST_UX_TO_XX(int_CastSizeToU64, size_t, uint64_t, UINT64_MAX)
+#else
+GEN_CAST_UNCHECKED(int_CastSizeToU64, size_t, uint64_t)
+#endif
