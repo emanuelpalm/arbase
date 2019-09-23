@@ -1,11 +1,19 @@
+/// Error codes.
+///
+/// This files lists all possible AREV errors and their codes. All codes are
+/// negative, except for the no error type, in order to ensure that there is no
+/// overlap with standard C error codes.
+///
+/// @file
+
 #ifndef AREV_ERROR
 #define AREV_ERROR(CODE, NAME, DESCRIPTION)
 #endif
 
-AREV_ERROR(0, ERROR_NONE, "No error")
+AREV_ERROR(0, NONE, "No error")
 
 // Integer errors.
-AREV_ERROR(-256, ERROR_INT_DIVZERO, "Division by zero")
-AREV_ERROR(-257, ERROR_INT_MODZERO, "Modulus by zero")
-AREV_ERROR(-258, ERROR_INT_OVERFLOW, "Integer overflow")
-AREV_ERROR(-259, ERROR_INT_UNDERFLOW, "Integer underflow")
+AREV_ERROR(-256, MATH_DIVZERO, "Division by zero")
+AREV_ERROR(-257, MATH_MODZERO, "Modulus by zero")
+AREV_ERROR(-258, MATH_OVERFLOW, "Integer overflow")
+AREV_ERROR(-259, MATH_UNDERFLOW, "Integer underflow")

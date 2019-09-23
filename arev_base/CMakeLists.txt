@@ -3,13 +3,11 @@ project(arev_base C)
 
 set(
     SOURCE_FILES
-    include/arev/base.h
     include/arev/error.inc
-    src/base.c
-    src/err.c
-    src/err.h
-    src/int.c
-    src/int.h
+    include/arev/error.h
+    include/arev/math.h
+    src/error.c
+    src/math.c
 )
 add_library(arev_base STATIC ${SOURCE_FILES})
 target_include_directories(
