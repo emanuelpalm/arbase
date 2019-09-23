@@ -5,8 +5,10 @@ set(
     SOURCE_FILES
     include/arev/error.inc
     include/arev/error.h
+    include/arev/loop.h
     include/arev/math.h
     src/error.c
+    src/loop.c
     src/math.c
 )
 add_library(arev_base STATIC ${SOURCE_FILES})
