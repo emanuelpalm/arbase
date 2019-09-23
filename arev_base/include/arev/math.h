@@ -6,7 +6,7 @@
 /// More specifically, all functions defined in this file are guaranteed to
 /// never cause undefined behavior. That being said, no guarantees are given
 /// about the state of out variables if these functions return any other
-/// results than ERROR_NONE.
+/// results than AREV_ERROR_NONE.
 ///
 /// @file
 

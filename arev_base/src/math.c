@@ -1,4 +1,4 @@
-#include "arev/math.h"
+#include <arev/math.h>
 
 #ifdef AREV_GCC
 
