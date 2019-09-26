@@ -1,4 +1,4 @@
-#include <arev/loop.h>
+#include <arev/arev.h>
 #include <stdlib.h>
 
 #if defined(AREV_LINUX)
