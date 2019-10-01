@@ -1,8 +1,8 @@
 #ifndef AREV_AREV_H
 #define AREV_AREV_H
 
-#include <arev/error.h>
-#include <arev/net/tcp.h>
+#include "error.h"
+#include "net/tcp.h"
 
 struct arev_EventLoop;
 struct arev_Options;
@@ -20,9 +20,10 @@ struct arev_Options {
 };
 
 arev_Error arev_StartEventLoop(arev_Options *options);
-arev_Error arev_StopEventLoop(arev_EventLoop *loop);
 
 arev_Error arev_OpenTCPListener(arev_EventLoop *loop, arev_TCPListenerOptions *options);
 arev_Error arev_OpenTCPSocket(arev_EventLoop *loop, arev_TCPSocketOptions *options);
+
+arev_Error arev_StopEventLoop(arev_EventLoop *loop);
 
 #endif

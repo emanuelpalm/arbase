@@ -1,8 +1,8 @@
 #ifndef AREV_NET_TCP_H
 #define AREV_NET_TCP_H
 
-#include <arev/error.h>
-#include <arev/net/host.h>
+#include "../error.h"
+#include "host.h"
 #include <stddef.h>
 
 struct arev_TCPListener;
