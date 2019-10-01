@@ -12,12 +12,14 @@ set(
     include/arev/mem/writer.h
     include/arev/net/host.h
     include/arev/net/tcp.h
+    include/arev/time.h
     src/arev.c
     src/error.c
     src/math.c
     src/mem/reader.c
     src/mem/writer.c
     src/net/host.c
+    src/time-posix.c
 )
 add_library(arev_base STATIC ${SOURCE_FILES})
 target_include_directories(
