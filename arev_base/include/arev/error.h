@@ -5,6 +5,13 @@
 ///
 /// @file
 
+#define AREV_TRY(STATUS) do {              \
+    arev_Error __arev_error = (STATUS);    \
+    if (__arev_error != AREV_ERROR_NONE) { \
+        return __arev_error;               \
+    }                                      \
+} while (0)
+
 /// An error code.
 typedef int arev_Error;
 
