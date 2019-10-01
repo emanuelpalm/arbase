@@ -9,12 +9,24 @@
 #endif
 
 /// Maintains data related to some event loop.
-typedef struct {
+struct arev_EventLoop {
 #if defined(AREV_LINUX)
     int epollfd;
 #endif
-} arev_LoopOptions;
+};
 
-void arev_Loop() {
-    exit(EXIT_SUCCESS);
+arev_Error arev_StartEventLoop(arev_Options *options) {
+    return AREV_ERROR_NONE; // TODO: Implement.
+}
+
+arev_Error arev_ScheduleEventAt(arev_EventLoop *loop, arev_Time instant, void *context) {
+    return AREV_ERROR_NONE; // TODO: Implement.
+}
+
+arev_Error arev_ScheduleEventIn(arev_EventLoop *loop, arev_Time duration, void *context) {
+    return AREV_ERROR_NONE; // TODO: Implement.
+}
+
+arev_Error arev_StopEventLoop(arev_EventLoop *loop) {
+    return AREV_ERROR_NONE; // TODO: Implement.
 }
