@@ -19,13 +19,13 @@
 } while (0)
 
 static_assert(
-    sizeof(((struct timespec){0}).tv_sec) <= sizeof(((arev_Time){0}).us),
-    "The assumption that struct timespec .tv_sec type fits in arev_Time .us does not hold.");
+    sizeof(((struct timespec){0}).tv_sec) <= sizeof(((arev_Instant){0}).us),
+    "The assumption that struct timespec .tv_sec type fits in arev_Instant .us does not hold.");
 static_assert(
-    sizeof(((struct timespec){0}).tv_nsec) <= sizeof(((arev_Time){0}).us),
-    "The assumption that struct timespec .tv_nsec type fits in arev_Time .us does not hold.");
+    sizeof(((struct timespec){0}).tv_nsec) <= sizeof(((arev_Instant){0}).us),
+    "The assumption that struct timespec .tv_nsec type fits in arev_Instant .us does not hold.");
 
-arev_Error arev_Now(arev_Time *out) {
+arev_Error arev_Now(arev_Instant *out) {
     struct timespec ts;
     if (clock_gettime(CLOCK_REALTIME, &ts) != 0) {
         return errno;
@@ -35,17 +35,5 @@ arev_Error arev_Now(arev_Time *out) {
     int64_t us1;
     TRY_MATH(arev_DivI64(ts.tv_nsec, 1000, &us1));
     TRY_MATH(arev_AddI64(us0, us1, &out->us));
-    return AREV_ERROR_NONE;
-}
-
-inline
-arev_Error arev_AddTime(arev_Time a, arev_Time b, arev_Time *out) {
-    TRY_MATH(arev_AddI64(a.us, b.us, &out->us));
-    return AREV_ERROR_NONE;
-}
-
-inline
-arev_Error arev_SubTime(arev_Time a, arev_Time b, arev_Time *out) {
-    TRY_MATH(arev_SubI64(a.us, b.us, &out->us));
     return AREV_ERROR_NONE;
 }

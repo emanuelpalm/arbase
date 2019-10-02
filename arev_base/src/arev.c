@@ -8,25 +8,24 @@
 #error No existing event loop implementation supported by target system.
 #endif
 
-/// Maintains data related to some event loop.
-struct arev_EventLoop {
+struct arev_t {
 #if defined(AREV_LINUX)
     int epollfd;
 #endif
 };
 
-arev_Error arev_StartEventLoop(arev_Options *options) {
+arev_Error arev_Start(arev_Options *options) {
+    (void) options;
     return AREV_ERROR_NONE; // TODO: Implement.
 }
 
-arev_Error arev_ScheduleEventAt(arev_EventLoop *loop, arev_Time instant, void *context) {
+arev_Error arev_ScheduleTask(arev_t *a, arev_Task *task) {
+    (void) a;
+    (void) task;
     return AREV_ERROR_NONE; // TODO: Implement.
 }
 
-arev_Error arev_ScheduleEventIn(arev_EventLoop *loop, arev_Time duration, void *context) {
-    return AREV_ERROR_NONE; // TODO: Implement.
-}
-
-arev_Error arev_StopEventLoop(arev_EventLoop *loop) {
+arev_Error arev_Stop(arev_t *a) {
+    (void) a;
     return AREV_ERROR_NONE; // TODO: Implement.
 }
