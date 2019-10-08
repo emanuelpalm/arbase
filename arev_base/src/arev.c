@@ -19,9 +19,9 @@ arev_Error arev_Start(arev_Options *options) {
     return AREV_ERROR_NONE; // TODO: Implement.
 }
 
-arev_Error arev_ScheduleTask(arev_t *a, arev_Task *task) {
+arev_Error arev_Schedule(arev_t *a, arev_Activity *activity) {
     (void) a;
-    (void) task;
+    (void) activity;
     return AREV_ERROR_NONE; // TODO: Implement.
 }
 
