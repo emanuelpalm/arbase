@@ -3,9 +3,10 @@
 
 int main() {
 #ifndef NDEBUG
-    puts("Arev Test");
-    puts("  Compiler: " AREV_COMPILER_ID);
-    puts("  System:   " AREV_SYSTEM_NAME " " AREV_SYSTEM_VERSION);
+    puts(
+        "Arev Test\n"
+        "  Compiler: " AREV_COMPILER_ID "\n"
+        "  System:   " AREV_SYSTEM_NAME " " AREV_SYSTEM_VERSION);
 #endif
     return EXIT_SUCCESS;
 }

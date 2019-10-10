@@ -19,5 +19,5 @@ AREV_ERROR(-258, MATH_OVERFLOW, "Arithmetic overflow")
 AREV_ERROR(-259, MATH_UNDERFLOW, "Arithmetic underflow")
 
 // Time errors.
-AREV_ERROR(-512, TIME_OVERFLOW, "Duration overflow")
-AREV_ERROR(-513, TIME_UNDERFLOW, "Duration underflow")
+AREV_ERROR(-512, TIME_OVERFLOW, "Temporal overflow")
+AREV_ERROR(-513, TIME_UNDERFLOW, "Temporal underflow")
