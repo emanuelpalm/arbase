@@ -19,6 +19,7 @@ set(
     src/mem/reader.c
     src/mem/writer.c
     src/net/host.c
+    src/time.c
     src/time-posix.c
 )
 add_library(arev_base STATIC ${SOURCE_FILES})
