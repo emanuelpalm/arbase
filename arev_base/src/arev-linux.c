@@ -2,22 +2,16 @@
 #include <stdbool.h>
 #include <string.h>
 
-#if defined(AREV_LINUX)
 #include <sys/epoll.h>
 #include <sys/signalfd.h>
-#else
-#error No existing event loop implementation supported by target system.
-#endif
 
 struct arev_t {
     arev_Options options;
     bool is_stopped;
-#if defined(AREV_LINUX)
     int epollfd;
-#endif
 };
 
-arev_Error arev_Start(arev_Options *options) {
+arev_Error arev_Start(const arev_Options *options) {
     arev_t a;
     memset(&a, 0, sizeof(arev_t));
     memcpy(&a.options, options, sizeof(arev_Options));

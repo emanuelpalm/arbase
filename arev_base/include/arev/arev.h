@@ -29,7 +29,7 @@ struct arev_ScheduledEvent {
     void *context;
 };
 
-arev_Error arev_Start(arev_Options *options);
+arev_Error arev_Start(const arev_Options *options);
 
 arev_Error arev_OpenTCPListener(arev_t *a, arev_TCPListenerOptions *options);
 arev_Error arev_OpenTCPSocket(arev_t *a, arev_TCPSocketOptions *options);

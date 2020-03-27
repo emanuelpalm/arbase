@@ -13,7 +13,7 @@ set(
     include/arev/net/host.h
     include/arev/net/tcp.h
     include/arev/time.h
-    src/arev.c
+    src/arev-linux.c
     src/error.c
     src/math.c
     src/mem/reader.c
